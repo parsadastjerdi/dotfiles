@@ -9,9 +9,9 @@ echo "[2] Arch Linux"; echo;
 read SYSTEM;
 
 if [$SYSTEM = "1"]; then
-    bash install/osx.sh
+    bash osx/install.sh
 else if [$SYSTEM = "2"]; then
-    bash install/arch.sh
+    bash arch/install.sh
 else
     echo "Invalid operating system.";
 fi
