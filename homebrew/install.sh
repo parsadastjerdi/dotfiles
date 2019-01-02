@@ -2,8 +2,8 @@
 
 #======================================================================
 # FILE: install.sh
-#       This script is a modified version of homebrew.sh from Aditya Pillai. github @ adityarpillai 
-#       Credit: https://gist.github.com/codeinthehole/26b37efa67041e1307db
+#       Credit: homebrew.sh from (github @ adityarpillai)
+#               https://gist.github.com/codeinthehole/26b37efa67041e1307db
 #
 # USAGE: ./install.sh
 #        or install.sh
