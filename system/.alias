@@ -1,0 +1,18 @@
+#! usr/bin/env bash 
+
+alias la="ls -a"    # list include dotfiles
+alias ll="ls -l"    # list in long format
+alias lla="ls -la"  # list in long format includes dotfiles
+
+alias ..="../"      
+alias ...="../.."
+alias ....="../../.."
+alias ....="../../../.."
+
+# Shortcuts
+alias rmf="rm -rf"
+alias reload="source ~/.bash_profile"
+
+
+# Recursively remove .DS_Store files
+alias cleands="find . -type f -name '*.DS_Store' -ls -delete"
