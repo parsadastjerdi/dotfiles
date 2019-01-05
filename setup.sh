@@ -1,4 +1,4 @@
-#! /bin/bash
+#! bin/bash
 
 #======================================================================
 # FILE: setup.sh
@@ -15,19 +15,27 @@
 #======================================================================
 
 echo "Select operating system: ";
-echo "[1] macOS"; echo;
-echo "[2] Arch Linux"; echo;
+echo "[1] macOS";
+echo "[2] Arch Linux";
+echo "[3] osx";
 
 read SYSTEM;
 
-cd ~
+echo $SYSTEM
 
-if [$SYSTEM = "1"]; then
-    bash osx/install.sh
-else if [$SYSTEM = "2"]; then
-    bash arch/install.sh
+# Run scripts from root directory
+# cd ~
+
+if [ $SYSTEM -eq 1 ] then
+    echo "macOS";
+    # ./macos/install.sh
+elif [ $SYSTEM -eq 2 ] then
+    ./arch/install.sh
+elif [ $SYSTEM -eq 3 ] then
+    ./osx/install.sh
 else
     echo "Invalid operating system.";
+    exit 1
 fi
- 
-exit 0
+
+echo "If statement doesn't work";

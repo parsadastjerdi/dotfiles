@@ -1,17 +1,17 @@
 #! /bin/bash
 
 #======================================================================
-# FILE: install.sh
+# FILE: setup.sh
 #
-# USAGE: ./install.sh
-#        or bash install.sh
+# USAGE: ./setup.sh
+#        or setup.sh
 #
-# DESCRIPTION:
+# DESCRIPTION: Installs all applications depending on the operating system selected
 #
 # OPTIONS:
 # AUTHOR: 
-# CREATED:
+# CREATED: 01.02.2019
 # BUGS: 
 #======================================================================
 
-echo "Arch";
+echo "macOS";

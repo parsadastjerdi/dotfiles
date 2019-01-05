@@ -1,17 +1,16 @@
-#! /bin/bash
+#! bin/bash
 
 #======================================================================
 # FILE: install.sh
 #
 # USAGE: ./install.sh
-#        or bash install.sh
+#        or install.sh
 #
-# DESCRIPTION:
+# DESCRIPTION: Sets up VPN using OpenVPN
 #
 # OPTIONS:
 # AUTHOR: 
-# CREATED:
+# CREATED: 01.04.2019
 # BUGS: 
 #======================================================================
 
-echo "Arch";
