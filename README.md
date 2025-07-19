@@ -1,10 +1,10 @@
 
-To run `symlink.sh`, give permissions to execute via
+To run shell scripts, e.g. `create-symlinks.sh`, give permissions to execute via
 ```
-chmod +x symlink.sh
+chmod +x create-symlinks.sh
 ```
 
 then run
 ```
-./symlink.sh
+./create-symlinks.sh
 ```
