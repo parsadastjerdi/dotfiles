@@ -7,13 +7,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
 # Set auto-update behavior
 zstyle ':omz:update' mode reminder
 zstyle ':omz:update' frequency 7
@@ -23,6 +16,9 @@ ZSH_CONFIG_DIR="$HOME/.config/zsh"
 for config in "$ZSH_CONFIG_DIR"/{aliases, exports, functions, plugins}.zsh; do
   [ -r "$config" ] && source "$config"
 done
+
+# Source aliases.zsh to detect aliases
+source $HOME/.config/zsh/aliases.zsh
 
 # Enable command auto-correction.
 ENABLE_CORRECTION="true"
