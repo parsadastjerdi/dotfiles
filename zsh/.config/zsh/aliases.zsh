@@ -17,6 +17,7 @@ alias gc="git commit"
 alias gcm="git commit -m"
 alias gca="git commit --amend"
 alias gpo="git pull origin"
+unalias gl # oh-my-zsh aliases this to git pull
 alias gl="git log"
 
 alias la="ls -A"
