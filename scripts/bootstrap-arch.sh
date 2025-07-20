@@ -16,7 +16,8 @@ pacman -S zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # languages
-pacman -S rust
+# pacman -S rust
+pacman -S rustup # using the official rust toolchain rather than arch's pre-compile rust package
 pacman -S go
 pacman -S npm
 
