@@ -45,9 +45,9 @@ export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='hx'
+  export EDITOR='helix'
 else
-  export EDITOR='hx'
+  export EDITOR='helix'
 fi
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
