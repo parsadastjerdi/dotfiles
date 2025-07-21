@@ -12,6 +12,9 @@ pacman -S sudo
 pacman -S zellij # tmux replacment
 pacman -S bash
 pacman -S zsh
+pacman -S fastfetch
+pacman -S btop
+pacman -S lazygit
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
