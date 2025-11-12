@@ -8,7 +8,7 @@ alias zshconfig="hx ~/.zshrc"
 alias ohmyzsh="hx ~/.oh-my-zsh"
 alias hxconfig="hx ~/.config/helix/config.toml"
 alias hxlangconfig="hx ~/.config/helix/languages.toml"
-alias hx="helix" # https://github.com/helix-editor/helix/issues/2335
+# alias hx="helix" # https://github.com/helix-editor/helix/issues/2335
 alias loadzsh="source ~/.zshrc"
 
 alias gs="git status"
