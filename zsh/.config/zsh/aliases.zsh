@@ -30,3 +30,6 @@ alias cc="cargo check"
 
 # golang aliases
 alias prisma="go run github.com/prisma/prisma-client-go"
+
+alias cd="z"
+alias vim="nvim"
