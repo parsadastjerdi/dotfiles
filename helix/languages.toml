@@ -5,6 +5,25 @@ auto-format = true
 indent = { tab-width = 4, unit = " " }
 language-servers = ["rust-analyzer"]
 
+roots = [
+  "Cargo.toml",
+  "Cargo.lock"
+]
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+
+[language-server.rust-analyzer.config]
+inlayHints.bindingModeHints.enable = false
+inlayHints.closingBraceHints.minLines = 10
+inlayHints.closureReturnTypeHints.enable = "with_block"
+inlayHints.discriminantHints.enable = "fieldless"
+inlayHints.lifetimeElisionHints.enable = "skip_trivial"
+inlayHints.typeHints.hideClosureInitialization = false
+
 [language-server.rust-analyzer.config.check]
 checkOnSave = { command = "clippy" }
 
@@ -25,6 +44,7 @@ comment-token = "//"
 # golang needs utf-8 offsets
 indent = { tab-width = 4, unit = "\t"}
 
+# Typescript configuration
 [[language]]
 name = "typescript"
 language-servers = ["typescript-language-server"]
@@ -43,7 +63,12 @@ language-servers = ["typescript-language-server"]
 name = "jsx"
 language-servers = ["typescript-language-server"]
 
+[language-server.typescript-language-server]
+command = "typescript-language-server"
+args = ["--stdio"]
 
+
+# TOML configuration
 [[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
