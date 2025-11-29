@@ -1,0 +1,15 @@
+{
+  "disable_ai": true,
+  "project_panel": {
+    "dock": "left"
+  },
+  "theme": "Catppuccin Mocha",
+  "vim_mode": true,
+  "helix_mode": true,
+  "ui_font_size": 15,
+  "buffer_font_size": 15,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  }
+}
