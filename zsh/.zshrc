@@ -1,17 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-
-# Set auto-update behavior
-zstyle ':omz:update' mode reminder
-zstyle ':omz:update' frequency 7
-
-# Load ZSH plugins 
+# Load ZSH plugins
 ZSH_CONFIG_DIR="$HOME/.config/zsh"
 for config in "$ZSH_CONFIG_DIR"/{aliases, exports, functions, plugins}.zsh; do
   [ -r "$config" ] && source "$config"
@@ -38,8 +28,6 @@ ZSH_CUSTOM=$HOME/dotfiles/zsh
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
-
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
@@ -65,3 +53,13 @@ export PATH=$PATH:/usr/local/go/bin
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Export other paths, append to existing path. TODO: elixir overrides i think
+export PATH="$PATH:/usr/bin/elixir"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# init starship
+eval "$(starship init zsh)"
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"

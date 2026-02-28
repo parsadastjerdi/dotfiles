@@ -25,11 +25,11 @@ alias ll="ls -l"
 # cargo aliases
 alias cb="cargo build"
 alias cbr="cargo build --release"
-alias crr="cargo run" # would conflict with cr tool
+alias cr="cargo run"
 alias cc="cargo check"
 
 # golang aliases
 alias prisma="go run github.com/prisma/prisma-client-go"
 
-alias cd="z"
+alias j="z"
 alias vim="nvim"
