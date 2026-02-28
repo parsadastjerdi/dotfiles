@@ -16,13 +16,13 @@ roots = [
 '"' = '"'
 '`' = '`'
 
-[language-server.rust-analyzer.config]
-inlayHints.bindingModeHints.enable = false
-inlayHints.closingBraceHints.minLines = 10
-inlayHints.closureReturnTypeHints.enable = "with_block"
-inlayHints.discriminantHints.enable = "fieldless"
-inlayHints.lifetimeElisionHints.enable = "skip_trivial"
-inlayHints.typeHints.hideClosureInitialization = false
+# [language-server.rust-analyzer.config]
+# inlayHints.bindingModeHints.enable = true
+# inlayHints.closingBraceHints.minLines = 10
+# inlayHints.closureReturnTypeHints.enable = "with_block"
+# inlayHints.discriminantHints.enable = "fieldless"
+# inlayHints.lifetimeElisionHints.enable = "skip_trivial"
+# inlayHints.typeHints.hideClosureInitialization = false
 
 [language-server.rust-analyzer.config.check]
 checkOnSave = { command = "clippy" }
@@ -43,6 +43,20 @@ language-servers = ["gopls"]
 comment-token = "//"
 # golang needs utf-8 offsets
 indent = { tab-width = 4, unit = "\t"}
+
+# Elixir configuration
+[[language]]
+name = "elixir"
+scope = "source.elixir"
+injection-regex = "elixir"
+file-types = ["ex", "exs", "mix.lock"]
+roots = ["mix.exs"]
+comment-token = "#"
+language-servers = ["elixir-ls"]
+indent = { tab-width = 2, unit = "  " }
+
+[language-server.elixir-ls]
+command = "/home/parsadastjerdi/elixir-ls/release/language_server.sh"
 
 # Typescript configuration
 [[language]]
@@ -66,7 +80,6 @@ language-servers = ["typescript-language-server"]
 [language-server.typescript-language-server]
 command = "typescript-language-server"
 args = ["--stdio"]
-
 
 # TOML configuration
 [[language]]
