@@ -1,4 +1,7 @@
 # taps
+tap "nikitabobko/tap", trusted: {
+    cask: "aerospace"
+}
 tap "felixkratz/formulae"
 
 # formulae
@@ -9,13 +12,11 @@ brew "fastfetch"
 brew "fd"
 brew "fzf"
 brew "helix"
-brew "hyperkey"
 brew "python"
 brew "python-lsp-server"
 brew "rust-analyzer"
 brew "starship"
 brew "stow"
-brew "supacode"
 brew "tmux"
 brew "wget"
 brew "xz"
@@ -30,7 +31,8 @@ brew "zsh-you-should-use"
 # casks
 cask "1password"
 cask "aerospace"
-cask "ghostty"
+cask "hyperkey"
 cask "obsidian"
 cask "raycast"
+cask "supacode"
 cask "zed"
