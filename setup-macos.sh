@@ -7,11 +7,18 @@ else
     echo "Homebrew already installed"
 fi
 
-if ! command opencode &> /dev/null; then
+if ! command -v opencode &> /dev/null; then
     echo "Installing OpenCode..."
     /bin/bash -c "$(curl -fsSL https://opencode.ai/install | bash)"
 else
     echo "OpenCode already installed"
+fi
+
+if ! command -v rustup &> /dev/null; then
+    echo "Installing RustUp"
+    /bin/bash -c "$(curl https://sh.rustup.rs -sSf -y | sh)"
+else
+    echo "RustUp already installed"
 fi
 
 brew update
