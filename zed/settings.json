@@ -4,7 +4,7 @@
   "project_panel": {
     "dock": "left",
   },
-  "theme": "One Dark",
+  "theme": "Catppuccin Mocha",
   "vim_mode": true,
   "helix_mode": true,
   "ui_font_size": 15,
