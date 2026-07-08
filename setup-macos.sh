@@ -25,6 +25,11 @@ brew update
 brew upgrade
 brew bundle install
 
+echo "Installing OpenCode hook plugins..."
+npm install -g opencode-yaml-hooks opencode-command-hooks 2>/dev/null && echo "Hook plugins installed" || echo "Hook plugins skipped (npm install failed)"
+mkdir -p ~/.config/opencode/hook
+mkdir -p ~/.config/opencode/plugins
+
 echo "Symlinking dotfiles..."
 cd "$(dirname "$0")"
 
@@ -37,7 +42,11 @@ stow git --target=$HOME 2>/dev/null
 mkdir -p ~/.config/helix && stow helix --target=$HOME/.config/helix 2>/dev/null
 mkdir -p ~/.config/starship && stow starship --target=$HOME/.config/starship 2>/dev/null
 mkdir -p ~/.config/zed && stow zed --target=$HOME/.config/zed 2>/dev/null
-mkdir -p ~/.config/ghostty && stow ghostty --target=$HOME/.config/zed 2>/dev/null
+mkdir -p ~/.config/ghostty && stow ghostty --target=$HOME/.config/ghostty 2>/dev/null
+mkdir -p ~/.config/opencode && stow opencode --target=$HOME/.config/opencode 2>/dev/null
+
+# Install opencode config dependencies (supacode plugin, etc.)
+npm --prefix ~/.config/opencode install 2>/dev/null || true
 
 echo "Dotfiles symlinked"
 echo "Setting MacOS defaults"

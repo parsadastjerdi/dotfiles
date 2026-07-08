@@ -28,6 +28,7 @@ brew "zsh-completions"
 brew "zsh-history-substring-search"
 brew "zsh-syntax-highlighting"
 brew "zsh-you-should-use"
+brew "node"
 
 # casks
 cask "1password"
