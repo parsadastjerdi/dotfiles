@@ -63,3 +63,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # init starship
 eval "$(starship init zsh)"
 export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+
+# opencode
+export PATH=/Users/parsadastjerdi/.opencode/bin:$PATH
