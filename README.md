@@ -1,10 +1,5 @@
 
-To run shell scripts, e.g. `create-symlinks.sh`, give permissions to execute via
+Stow dotfiles:
 ```
-chmod +x create-symlinks.sh
-```
-
-then run
-```
-./create-symlinks.sh
+./scripts/stow-dotfiles.sh
 ```

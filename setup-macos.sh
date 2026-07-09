@@ -21,6 +21,13 @@ else
     echo "RustUp already installed"
 fi
 
+if ! command -v pi &> /dev/null; then
+    echo "Installing Pi"
+    /bin/bash -c "$(npm install -g --ignore-scripts @earendil-works/pi-coding-agent)"
+else
+    echo "Pi already installed"
+fi
+
 brew update
 brew upgrade
 brew bundle install
@@ -31,19 +38,7 @@ mkdir -p ~/.config/opencode/hook
 mkdir -p ~/.config/opencode/plugins
 
 echo "Symlinking dotfiles..."
-cd "$(dirname "$0")"
-
-stow zsh --target=$HOME 2>/dev/null
-stow tmux --target=$HOME 2>/dev/null
-stow vim --target=$HOME 2>/dev/null
-stow stow --target=$HOME 2>/dev/null
-stow git --target=$HOME 2>/dev/null
-
-mkdir -p ~/.config/helix && stow helix --target=$HOME/.config/helix 2>/dev/null
-mkdir -p ~/.config/starship && stow starship --target=$HOME/.config/starship 2>/dev/null
-mkdir -p ~/.config/zed && stow zed --target=$HOME/.config/zed 2>/dev/null
-mkdir -p ~/.config/ghostty && stow ghostty --target=$HOME/.config/ghostty 2>/dev/null
-mkdir -p ~/.config/opencode && stow opencode --target=$HOME/.config/opencode 2>/dev/null
+./scripts/stow-dotfiles.sh
 
 # Install opencode config dependencies (supacode plugin, etc.)
 npm --prefix ~/.config/opencode install 2>/dev/null || true
@@ -80,7 +75,7 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Global (NSGlobalDomain) — appearance, keyboard, input
 defaults write NSGlobalDomain AppleInterfaceStyle -string Dark          # dark mode
-defaults write NSGlobalDomain _HIHideMenuBar -bool true                 # auto-hide menubar
+# defaults write NSGlobalDomain _HIHideMenuBar -bool true                 # auto-hide menubar
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false      # key repeat over accent popup
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 2                # full keyboard access
 defaults write NSGlobalDomain AppleMiniaturizeOnDoubleClick -bool false

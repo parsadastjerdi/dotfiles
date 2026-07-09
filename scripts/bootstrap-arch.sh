@@ -24,3 +24,8 @@ pacman -S rustup # using the official rust toolchain rather than arch's pre-comp
 pacman -S go
 pacman -S npm
 
+# Activate dotfiles
+"$(dirname "$0")/stow-dotfiles.sh"
+
+echo -e "\nDone. Restart your shell to pick up changes."
+

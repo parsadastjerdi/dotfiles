@@ -139,3 +139,8 @@ install_dotnet() {
     sudo apt install dotnet-sdk-7.0
 }
 
+# Activate dotfiles
+"$(dirname "$0")/stow-dotfiles.sh"
+
+echo -e "\nDone. Restart your shell to pick up changes."
+

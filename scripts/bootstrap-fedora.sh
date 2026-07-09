@@ -117,3 +117,8 @@ gsettings set org.gnome.desktop.wm.preferences focus-mode click
 
 # claude code
 curl -fsSL https://claude.ai/install.sh | bash
+
+# Activate dotfiles
+"$(dirname "$0")/stow-dotfiles.sh"
+
+echo -e "\nDone. Restart your shell to pick up changes."
