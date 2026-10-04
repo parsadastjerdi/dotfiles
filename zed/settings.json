@@ -1,4 +1,7 @@
 {
+  "collaboration_panel": {
+    "button": false
+  },
   "cli_default_open_behavior": "existing_window",
   "disable_ai": true,
   "project_panel": {
