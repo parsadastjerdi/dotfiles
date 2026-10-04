@@ -66,3 +66,6 @@ export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
 
 # opencode
 export PATH=/Users/parsadastjerdi/.opencode/bin:$PATH
+
+# Added by cua-driver-rs installer — see https://github.com/trycua/cua
+export PATH="/Users/parsadastjerdi/.local/bin:$PATH"
