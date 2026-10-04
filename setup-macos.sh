@@ -28,6 +28,13 @@ else
     echo "Pi already installed"
 fi
 
+if ! command -v surfpool &> /dev/null; then
+    echo "Installing Surfpool"
+    /bin/bash -c "$(curl -sL https://run.surfpool.run/ | bash)"
+else
+    echo "Surfpool already installed"
+fi
+
 brew update
 brew upgrade
 brew bundle install
