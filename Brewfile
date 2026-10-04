@@ -9,7 +9,7 @@ tap "withgraphite/tap", trusted: {
 tap "rjyo/moshi", trusted: {
     formula: "moshi-hook"
 }
-tap "anomalyco/tap/opencode-v2", trusted: {
+tap "anomalyco/tap", trusted: {
     formula: "anomalyco/tap/opencode-v2"
 }
 
